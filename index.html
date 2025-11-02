@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moheb Supply Group - Government & Business Solutions | NAICS 424990</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Moheb Supply Group provides comprehensive supply solutions for government agencies and businesses, plus professional website development services.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .card-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-shine::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .card-shine:hover::before {
+            left: 100%;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-lg z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">M</span>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-gray-900">Moheb Supply Group</div>
+                        <div class="text-xs text-gray-500">NAICS: 424990</div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="nav-link text-gray-900 font-semibold">Home</a>
+                    <a href="supplies.html" class="nav-link text-gray-600 hover:text-gray-900">Supplies</a>
+                    <a href="web-development.html" class="nav-link text-gray-600 hover:text-gray-900">Web Development</a>
+                    <a href="about.html" class="nav-link text-gray-600 hover:text-gray-900">About</a>
+                    <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition">Contact Us</a>
+                </div>
+                
+                <button id="mobileMenuBtn" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pt-4 pb-3 space-y-3">
+                <a href="index.html" class="block text-gray-900 font-semibold">Home</a>
+                <a href="supplies.html" class="block text-gray-600 hover:text-gray-900">Supplies</a>
+                <a href="web-development.html" class="block text-gray-600 hover:text-gray-900">Web Development</a>
+                <a href="about.html" class="block text-gray-600 hover:text-gray-900">About</a>
+                <a href="contact.html" class="block text-gray-600 hover:text-gray-900">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white pt-32 pb-24 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="glass-effect inline-block px-4 py-2 rounded-full mb-6">
+                        <span class="text-sm font-semibold">🏆 Trusted Government & Business Partner</span>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                        Your Complete <span class="gradient-text">Solution Provider</span>
+                    </h1>
+                    
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        From comprehensive supply solutions to cutting-edge website development - we deliver excellence for government agencies and businesses nationwide.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="supplies.html" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold transition flex items-center justify-center gap-2 hover-scale">
+                            <span>Explore Supplies</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                        <a href="web-development.html" class="glass-effect hover:bg-white/20 text-white px-8 py-4 rounded-full font-semibold transition flex items-center justify-center gap-2 hover-scale">
+                            <span>Web Services</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center gap-6 text-sm">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Government Certified</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Fast Delivery</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>24/7 Support</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="float-animation">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800" alt="Business Solutions" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Our Core Services</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Delivering comprehensive solutions tailored for government agencies and businesses</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Supply Solutions Card -->
+                <div class="card-shine group bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-blue-100">
+                    <div class="mb-6">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600" alt="Supply Solutions" class="w-full h-64 object-cover rounded-2xl">
+                    </div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-3xl">
+                            📦
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900">Supply Solutions</h3>
+                            <p class="text-blue-600 font-semibold">Everything Your Business Needs</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        Complete range of office supplies, industrial equipment, and custom procurement solutions for government agencies and businesses.
+                    </p>
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Office & Industrial Supplies</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Government Contract Ready</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Bulk Ordering & Discounts</span>
+                        </div>
+                    </div>
+                    <a href="supplies.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition group-hover:gap-4">
+                        <span>Explore Supplies</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Web Development Card -->
+                <div class="card-shine group bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border-2 border-purple-100">
+                    <div class="mb-6">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" alt="Web Development" class="w-full h-64 object-cover rounded-2xl">
+                    </div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center text-3xl">
+                            💻
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900">Web Development</h3>
+                            <p class="text-purple-600 font-semibold">Professional Digital Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                        Custom websites, government portals, and e-commerce platforms designed to meet your specific needs and compliance requirements.
+                    </p>
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Custom Website Design</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Government Portal Development</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>E-Commerce Platforms</span>
+                        </div>
+                    </div>
+                    <a href="web-development.html" class="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-semibold transition group-hover:gap-4">
+                        <span>View Web Services</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4">Why Choose Moheb Supply Group?</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">Your trusted partner for reliable solutions and exceptional service</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
+                        🏆
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Certified Partner</h3>
+                    <p class="text-gray-300">Government certified and ready for contracts</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
+                        ⚡
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Fast Delivery</h3>
+                    <p class="text-gray-300">Quick turnaround on all orders and projects</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-pink-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
+                        💰
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Competitive Pricing</h3>
+                    <p class="text-gray-300">Best value with bulk discounts available</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
+                        🤝
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Dedicated Support</h3>
+                    <p class="text-gray-300">24/7 customer service for your needs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Let's discuss how we can help your organization with supplies or website development
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-lg transition hover-scale">
+                        Contact Us Today
+                    </a>
+                    <a href="about.html" class="glass-effect hover:bg-white/20 px-8 py-4 rounded-full font-bold text-lg transition hover-scale">
+                        Learn More About Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">M</span>
+                        </div>
+                        <div class="text-xl font-bold">Moheb Supply Group</div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Your trusted partner for government and business supply solutions plus professional website development.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="supplies.html" class="hover:text-white transition">Supplies</a></li>
+                        <li><a href="web-development.html" class="hover:text-white transition">Web Development</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Office Supplies</li>
+                        <li>Industrial Equipment</li>
+                        <li>Website Development</li>
+                        <li>Government Portals</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>info@mohebsupplygroup.com</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>Mon-Fri: 8AM - 6PM</li>
+                        <li>NAICS: 424990</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Moheb Supply Group. All rights reserved. | Sole Proprietorship</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
