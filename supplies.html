@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supply Solutions - Moheb Supply Group | Complete Business & Government Supplies</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Comprehensive supply solutions for government agencies and businesses. Office supplies, technology, industrial equipment, and more.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-lg z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">M</span>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-gray-900">Moheb Supply Group</div>
+                        <div class="text-xs text-gray-500">NAICS: 424990</div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-gray-900">Home</a>
+                    <a href="supplies.html" class="nav-link text-gray-900 font-semibold">Supplies</a>
+                    <a href="web-development.html" class="nav-link text-gray-600 hover:text-gray-900">Web Development</a>
+                    <a href="about.html" class="nav-link text-gray-600 hover:text-gray-900">About</a>
+                    <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition">Contact Us</a>
+                </div>
+                
+                <button id="mobileMenuBtn" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pt-4 pb-3 space-y-3">
+                <a href="index.html" class="block text-gray-600 hover:text-gray-900">Home</a>
+                <a href="supplies.html" class="block text-gray-900 font-semibold">Supplies</a>
+                <a href="web-development.html" class="block text-gray-600 hover:text-gray-900">Web Development</a>
+                <a href="about.html" class="block text-gray-600 hover:text-gray-900">About</a>
+                <a href="contact.html" class="block text-gray-600 hover:text-gray-900">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white pt-32 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="glass-effect inline-block px-4 py-2 rounded-full mb-6">
+                    <span class="text-sm font-semibold">📦 Complete Supply Solutions</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    Everything Your <span class="gradient-text">Business Needs</span>
+                </h1>
+                
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+                    From office essentials to industrial equipment - we provide comprehensive supply solutions for government agencies and businesses of all sizes.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                    <a href="contact.html" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition hover-scale">
+                        Request Quote
+                    </a>
+                    <a href="#categories" class="glass-effect hover:bg-white/20 text-white px-8 py-4 rounded-full font-semibold transition hover-scale">
+                        Browse Categories
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+                    <div class="glass-effect p-4 rounded-xl">
+                        <div class="text-3xl font-bold mb-1">1000+</div>
+                        <div class="text-sm text-gray-300">Products</div>
+                    </div>
+                    <div class="glass-effect p-4 rounded-xl">
+                        <div class="text-3xl font-bold mb-1">24/7</div>
+                        <div class="text-sm text-gray-300">Support</div>
+                    </div>
+                    <div class="glass-effect p-4 rounded-xl">
+                        <div class="text-3xl font-bold mb-1">Fast</div>
+                        <div class="text-sm text-gray-300">Delivery</div>
+                    </div>
+                    <div class="glass-effect p-4 rounded-xl">
+                        <div class="text-3xl font-bold mb-1">Gov</div>
+                        <div class="text-sm text-gray-300">Certified</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="flex items-center gap-4 p-6 bg-blue-50 rounded-2xl">
+                    <div class="text-4xl">🚚</div>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Free Shipping</h3>
+                        <p class="text-sm text-gray-600">On orders over $500</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 p-6 bg-purple-50 rounded-2xl">
+                    <div class="text-4xl">💰</div>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Bulk Discounts</h3>
+                        <p class="text-sm text-gray-600">Save up to 30%</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 p-6 bg-green-50 rounded-2xl">
+                    <div class="text-4xl">🏆</div>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Gov Contracts</h3>
+                        <p class="text-sm text-gray-600">GSA Schedule Ready</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 p-6 bg-orange-50 rounded-2xl">
+                    <div class="text-4xl">⚡</div>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Quick Turnaround</h3>
+                        <p class="text-sm text-gray-600">Next-day available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supply Categories -->
+    <section id="categories" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Supply Categories</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Comprehensive solutions across all business needs</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Office & Administrative -->
+                <div class="card-shine bg-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        📋
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Office & Administrative</h3>
+                    <p class="text-gray-600 mb-6">Complete office essentials for daily operations</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Office Furniture (Desks, Chairs, Filing Cabinets)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Stationery & Writing Supplies</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Printing & Copy Paper</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Binders, Folders & Organizers</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Labels, Tags & Stamps</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Calendars & Planning Tools</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Technology & Electronics -->
+                <div class="card-shine bg-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        💻
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Technology & Electronics</h3>
+                    <p class="text-gray-600 mb-6">Latest tech solutions for modern workplaces</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Computers, Laptops & Tablets</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Monitors & Display Systems</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Printers, Scanners & Copiers</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Networking Equipment (Routers, Switches)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Software Licenses & Subscriptions</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Cables, Adapters & Accessories</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Facility & Maintenance -->
+                <div class="card-shine bg-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        🔧
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Facility & Maintenance</h3>
+                    <p class="text-gray-600 mb-6">Keep your facilities running smoothly</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Cleaning Supplies & Equipment</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Safety Equipment & PPE</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Tools & Hardware</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Lighting & Electrical Supplies</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>HVAC Filters & Supplies</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Facility Signage & Wayfinding</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Janitorial & Sanitation -->
+                <div class="card-shine bg-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        🧹
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Janitorial & Sanitation</h3>
+                    <p class="text-gray-600 mb-6">Professional cleaning and hygiene solutions</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Commercial Cleaning Chemicals</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Mops, Brooms & Dusters</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Trash Bags & Waste Receptacles</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Paper Products (Towels, Tissue, Napkins)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Hand Soap & Sanitizers</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Disinfectants & Sanitizing Equipment</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Breakroom & Hospitality -->
+                <div class="card-shine bg-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        ☕
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Breakroom & Hospitality</h3>
+                    <p class="text-gray-600 mb-6">Create comfortable employee spaces</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Coffee & Beverage Supplies</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Kitchen Appliances & Equipment</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Disposable Cups, Plates & Utensils</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Snacks & Refreshments</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Refrigerators & Microwaves</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Water Coolers & Filtration Systems</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Packaging & Shipping -->
+                <div class="card-shine bg-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        📦
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Packaging & Shipping</h3>
+                    <p class="text-gray-600 mb-6">Complete shipping and packaging materials</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Boxes & Shipping Containers</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Packing Tape & Dispensers</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Bubble Wrap & Protective Packaging</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Shipping Labels & Markers</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Mailing Envelopes & Bags</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Scales & Shipping Equipment</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Industrial & Warehouse -->
+                <div class="card-shine bg-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        🏭
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Industrial & Warehouse</h3>
+                    <p class="text-gray-600 mb-6">Heavy-duty equipment and supplies</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Material Handling Equipment</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Pallet Jacks & Forklifts</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Warehouse Storage Solutions</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Industrial Tools & Machinery</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Safety Equipment & Signage</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Protective Gear & Workwear</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Security & Safety -->
+                <div class="card-shine bg-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        🔒
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Security & Safety</h3>
+                    <p class="text-gray-600 mb-6">Protect your people and property</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Security Cameras & Surveillance</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Access Control Systems</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Fire Safety Equipment</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>First Aid & Emergency Supplies</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Personal Protective Equipment</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Emergency Lighting & Exit Signs</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Marketing & Promotional -->
+                <div class="card-shine bg-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        📢
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Marketing & Promotional</h3>
+                    <p class="text-gray-600 mb-6">Brand your business effectively</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Banners, Signs & Displays</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Promotional Products & Swag</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Branded Apparel & Uniforms</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Trade Show Equipment</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Business Cards & Stationery</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Digital Displays & Monitors</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Additional Supply Services</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Specialized solutions for unique business needs</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Medical & Healthcare -->
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 border-2 border-blue-100">
+                    <div class="text-5xl mb-4">🏥</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Medical & Healthcare</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Medical Equipment</li>
+                        <li>• Examination Supplies</li>
+                        <li>• Surgical Instruments</li>
+                        <li>• Healthcare Furniture</li>
+                        <li>• Patient Care Products</li>
+                        <li>• Sterilization Equipment</li>
+                    </ul>
+                </div>
+
+                <!-- Educational Supplies -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 border-2 border-green-100">
+                    <div class="text-5xl mb-4">📚</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Educational Supplies</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Classroom Furniture</li>
+                        <li>• Teaching Materials</li>
+                        <li>• Educational Technology</li>
+                        <li>• Art & Craft Supplies</li>
+                        <li>• Library Equipment</li>
+                        <li>• Sports & PE Equipment</li>
+                    </ul>
+                </div>
+
+                <!-- Automotive & Fleet -->
+                <div class="bg-gradient-to-br from-purple-50 to-violet-50 rounded-3xl p-8 border-2 border-purple-100">
+                    <div class="text-5xl mb-4">🚗</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Automotive & Fleet</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Vehicle Maintenance Supplies</li>
+                        <li>• Fleet Management Tools</li>
+                        <li>• Automotive Parts</li>
+                        <li>• Garage Equipment</li>
+                        <li>• Car Care Products</li>
+                        <li>• Diagnostic Tools</li>
+                    </ul>
+                </div>
+
+                <!-- Furniture & Fixtures -->
+                <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-8 border-2 border-orange-100">
+                    <div class="text-5xl mb-4">🪑</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Furniture & Fixtures</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Office Desks & Workstations</li>
+                        <li>• Conference Room Furniture</li>
+                        <li>• Reception Area Seating</li>
+                        <li>• Storage Solutions</li>
+                        <li>• Modular Office Systems</li>
+                        <li>• Ergonomic Furniture</li>
+                    </ul>
+                </div>
+
+                <!-- IT & Communications -->
+                <div class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-3xl p-8 border-2 border-pink-100">
+                    <div class="text-5xl mb-4">📡</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">IT & Communications</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Phone Systems</li>
+                        <li>• Video Conferencing</li>
+                        <li>• Network Infrastructure</li>
+                        <li>• Data Storage Solutions</li>
+                        <li>• Server Equipment</li>
+                        <li>• Telecommunications</li>
+                    </ul>
+                </div>
+
+                <!-- Custom Procurement -->
+                <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-3xl p-8 border-2 border-indigo-100">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Custom Procurement</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Specialized Equipment Sourcing</li>
+                        <li>• Vendor Management</li>
+                        <li>• Contract Negotiations</li>
+                        <li>• Supply Chain Solutions</li>
+                        <li>• Inventory Management</li>
+                        <li>• Procurement Consulting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government Contracts -->
+    <section class="py-24 bg-gradient-to-br from-blue-900 to-purple-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="glass-effect inline-block px-4 py-2 rounded-full mb-6">
+                        <span class="text-sm font-semibold">🏛️ Government Solutions</span>
+                    </div>
+                    <h2 class="text-5xl font-bold mb-6">Government Contract Ready</h2>
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        We're certified and ready to serve federal, state, and local government agencies with comprehensive supply solutions.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-lg">GSA Schedule Compliant</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-lg">Federal & State Certifications</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-lg">Competitive Pricing</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-lg">Compliance Documentation Support</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="inline-flex items-center gap-2 bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-lg transition hover-scale">
+                        <span>Discuss Your Project</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="float-animation">
+                    <img src="https://images.unsplash.com/photo-1436450412740-6b988f486c6b?w=600" alt="Government Building" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ordering Process -->
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Simple Ordering Process</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Get what you need in just a few easy steps</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-6">1</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Browse Catalog</h3>
+                    <p class="text-gray-600">Explore our comprehensive product categories</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-6">2</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Request Quote</h3>
+                    <p class="text-gray-600">Submit your requirements for a detailed quote</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-6">3</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Review & Approve</h3>
+                    <p class="text-gray-600">Review pricing and approve your order</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-6">4</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Fast Delivery</h3>
+                    <p class="text-gray-600">Receive your supplies quickly and reliably</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Stock Your Business?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Contact us today for a customized quote on all your supply needs
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-lg transition hover-scale">
+                        Request a Quote
+                    </a>
+                    <a href="tel:+15551234567" class="glass-effect hover:bg-white/20 px-8 py-4 rounded-full font-bold text-lg transition hover-scale">
+                        Call: (555) 123-4567
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">M</span>
+                        </div>
+                        <div class="text-xl font-bold">Moheb Supply Group</div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Your trusted partner for government and business supply solutions plus professional website development.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="supplies.html" class="hover:text-white transition">Supplies</a></li>
+                        <li><a href="web-development.html" class="hover:text-white transition">Web Development</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Office Supplies</li>
+                        <li>Industrial Equipment</li>
+                        <li>Website Development</li>
+                        <li>Government Portals</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>info@mohebsupplygroup.com</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>Mon-Fri: 8AM - 6PM</li>
+                        <li>NAICS: 424990</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Moheb Supply Group. All rights reserved. | Sole Proprietorship</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
