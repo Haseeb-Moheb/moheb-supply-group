@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Services - Moheb Supply Group | Professional Digital Solutions</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Professional web development services for government agencies and businesses. Custom websites, portals, e-commerce, and digital solutions.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-lg z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">M</span>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-gray-900">Moheb Supply Group</div>
+                        <div class="text-xs text-gray-500">NAICS: 424990</div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-gray-900">Home</a>
+                    <a href="supplies.html" class="nav-link text-gray-600 hover:text-gray-900">Supplies</a>
+                    <a href="web-development.html" class="nav-link text-gray-900 font-semibold">Web Development</a>
+                    <a href="about.html" class="nav-link text-gray-600 hover:text-gray-900">About</a>
+                    <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition">Contact Us</a>
+                </div>
+                
+                <button id="mobileMenuBtn" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pt-4 pb-3 space-y-3">
+                <a href="index.html" class="block text-gray-600 hover:text-gray-900">Home</a>
+                <a href="supplies.html" class="block text-gray-600 hover:text-gray-900">Supplies</a>
+                <a href="web-development.html" class="block text-gray-900 font-semibold">Web Development</a>
+                <a href="about.html" class="block text-gray-600 hover:text-gray-900">About</a>
+                <a href="contact.html" class="block text-gray-600 hover:text-gray-900">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white pt-32 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="glass-effect inline-block px-4 py-2 rounded-full mb-6">
+                        <span class="text-sm font-semibold">💻 Professional Web Solutions</span>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                        Build Your Digital <span class="gradient-text">Presence</span>
+                    </h1>
+                    
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        From custom websites to government portals and e-commerce platforms - we create powerful digital solutions that drive results for agencies and businesses.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="contact.html" class="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold transition hover-scale flex items-center justify-center gap-2">
+                            <span>Start Your Project</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                        <a href="#services" class="glass-effect hover:bg-white/20 text-white px-8 py-4 rounded-full font-semibold transition hover-scale flex items-center justify-center gap-2">
+                            <span>View Services</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center gap-6 text-sm">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Mobile Responsive</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>SEO Optimized</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Secure & Fast</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="float-animation">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="Web Development" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="flex items-center gap-4 p-6 bg-purple-50 rounded-2xl">
+                    <div class="text-4xl">🎨</div>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Custom Design</h3>
+                        <p class="text-sm text-gray-600">Unique to your brand</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 p-6 bg-blue-50 rounded-2xl">
+                    <div class="text-4xl">📱</div>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Fully Responsive</h3>
+                        <p class="text-sm text-gray-600">Works on all devices</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 p-6 bg-green-50 rounded-2xl">
+                    <div class="text-4xl">🔒</div>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Secure & Compliant</h3>
+                        <p class="text-sm text-gray-600">Gov-grade security</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 p-6 bg-orange-50 rounded-2xl">
+                    <div class="text-4xl">⚡</div>
+                    <div>
+                        <h3 class="font-bold text-gray-900">Lightning Fast</h3>
+                        <p class="text-sm text-gray-600">Optimized performance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section id="services" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Web Development Services</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Comprehensive digital solutions tailored to your needs</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Custom Website Design -->
+                <div class="card-shine bg-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        🎨
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Custom Website Design</h3>
+                    <p class="text-gray-600 mb-6">Unique, professional websites built from scratch to match your brand identity.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Unique Design Concepts</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Brand Identity Integration</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>User Experience (UX) Optimization</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Modern & Professional Layouts</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Unlimited Revisions</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- E-Commerce Development -->
+                <div class="card-shine bg-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        🛒
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">E-Commerce Solutions</h3>
+                    <p class="text-gray-600 mb-6">Full-featured online stores with payment processing and inventory management.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Shopping Cart Integration</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Payment Gateway Setup</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Product Management System</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Order Tracking & Analytics</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Mobile Shopping Experience</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Government Portals -->
+                <div class="card-shine bg-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        🏛️
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Government Portals</h3>
+                    <p class="text-gray-600 mb-6">Secure, compliant portals for federal, state, and local government agencies.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>WCAG 2.1 Accessibility Compliant</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Section 508 Compliance</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Secure User Authentication</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Document Management Systems</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Public Records Management</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Content Management Systems -->
+                <div class="card-shine bg-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        📝
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Content Management (CMS)</h3>
+                    <p class="text-gray-600 mb-6">Easy-to-use systems for managing your website content without coding.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>WordPress Development</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Custom CMS Solutions</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Blog & News Management</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>User-Friendly Interface</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Training & Support</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Web Applications -->
+                <div class="card-shine bg-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        ⚙️
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Web Applications</h3>
+                    <p class="text-gray-600 mb-6">Custom web-based applications for business processes and workflows.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Custom Business Tools</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Database Integration</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>API Development</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Cloud-Based Solutions</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Scalable Architecture</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Responsive -->
+                <div class="card-shine bg-white rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        📱
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Mobile-First Development</h3>
+                    <p class="text-gray-600 mb-6">Websites optimized for smartphones, tablets, and all screen sizes.</p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Responsive Design</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Touch-Optimized Interface</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Fast Mobile Loading</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Cross-Browser Compatible</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>Progressive Web Apps (PWA)</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Additional Web Services</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Complete digital solutions for your online presence</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- SEO & Marketing -->
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 border-2 border-blue-100">
+                    <div class="text-5xl mb-4">📈</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">SEO & Digital Marketing</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Search Engine Optimization</li>
+                        <li>• Google Analytics Setup</li>
+                        <li>• Keyword Research & Strategy</li>
+                        <li>• Social Media Integration</li>
+                        <li>• Email Marketing Setup</li>
+                        <li>• Conversion Optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Hosting & Maintenance -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 border-2 border-purple-100">
+                    <div class="text-5xl mb-4">🔧</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Hosting & Maintenance</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Secure Web Hosting</li>
+                        <li>• SSL Certificates</li>
+                        <li>• Regular Backups</li>
+                        <li>• Software Updates</li>
+                        <li>• 24/7 Monitoring</li>
+                        <li>• Technical Support</li>
+                    </ul>
+                </div>
+
+                <!-- Security & Compliance -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 border-2 border-green-100">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Security & Compliance</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• HTTPS/SSL Implementation</li>
+                        <li>• Data Encryption</li>
+                        <li>• GDPR Compliance</li>
+                        <li>• ADA/WCAG Accessibility</li>
+                        <li>• Security Audits</li>
+                        <li>• Firewall Protection</li>
+                    </ul>
+                </div>
+
+                <!-- API Integration -->
+                <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-8 border-2 border-orange-100">
+                    <div class="text-5xl mb-4">🔌</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">API Integration</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Third-Party API Connections</li>
+                        <li>• Payment Gateway Integration</li>
+                        <li>• CRM System Integration</li>
+                        <li>• Social Media APIs</li>
+                        <li>• Custom API Development</li>
+                        <li>• Data Synchronization</li>
+                    </ul>
+                </div>
+
+                <!-- Database Solutions -->
+                <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-3xl p-8 border-2 border-red-100">
+                    <div class="text-5xl mb-4">🗄️</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Database Solutions</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Database Design & Development</li>
+                        <li>• MySQL, PostgreSQL, MongoDB</li>
+                        <li>• Data Migration Services</li>
+                        <li>• Database Optimization</li>
+                        <li>• Backup & Recovery Systems</li>
+                        <li>• Cloud Database Setup</li>
+                    </ul>
+                </div>
+
+                <!-- UI/UX Design -->
+                <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-3xl p-8 border-2 border-indigo-100">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">UI/UX Design</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• User Interface Design</li>
+                        <li>• User Experience Research</li>
+                        <li>• Wireframing & Prototyping</li>
+                        <li>• Design System Creation</li>
+                        <li>• Usability Testing</li>
+                        <li>• Conversion Rate Optimization</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="py-24 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4">Technologies We Use</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">Modern, reliable technologies for powerful web solutions</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Frontend -->
+                <div class="glass-effect rounded-2xl p-6">
+                    <div class="text-4xl mb-4">⚛️</div>
+                    <h3 class="text-xl font-bold mb-3">Frontend</h3>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li>• HTML5 / CSS3</li>
+                        <li>• JavaScript / TypeScript</li>
+                        <li>• React / Next.js</li>
+                        <li>• Vue.js / Nuxt.js</li>
+                        <li>• Tailwind CSS</li>
+                        <li>• Bootstrap</li>
+                    </ul>
+                </div>
+
+                <!-- Backend -->
+                <div class="glass-effect rounded-2xl p-6">
+                    <div class="text-4xl mb-4">🔧</div>
+                    <h3 class="text-xl font-bold mb-3">Backend</h3>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li>• Node.js / Express</li>
+                        <li>• Python / Django</li>
+                        <li>• PHP / Laravel</li>
+                        <li>• Ruby on Rails</li>
+                        <li>• .NET Core</li>
+                        <li>• Java / Spring</li>
+                    </ul>
+                </div>
+
+                <!-- Database -->
+                <div class="glass-effect rounded-2xl p-6">
+                    <div class="text-4xl mb-4">💾</div>
+                    <h3 class="text-xl font-bold mb-3">Database</h3>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li>• MySQL</li>
+                        <li>• PostgreSQL</li>
+                        <li>• MongoDB</li>
+                        <li>• Redis</li>
+                        <li>• Firebase</li>
+                        <li>• Microsoft SQL</li>
+                    </ul>
+                </div>
+
+                <!-- Cloud & Hosting -->
+                <div class="glass-effect rounded-2xl p-6">
+                    <div class="text-4xl mb-4">☁️</div>
+                    <h3 class="text-xl font-bold mb-3">Cloud & Hosting</h3>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li>• AWS (Amazon Web Services)</li>
+                        <li>• Google Cloud Platform</li>
+                        <li>• Microsoft Azure</li>
+                        <li>• DigitalOcean</li>
+                        <li>• Netlify / Vercel</li>
+                        <li>• cPanel / Plesk</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Our Development Process</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">A proven approach to delivering exceptional results</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-6">1</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Discovery</h3>
+                    <p class="text-gray-600">Understanding your goals, requirements, and target audience</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-6">2</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Planning</h3>
+                    <p class="text-gray-600">Creating wireframes, sitemaps, and project roadmap</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-6">3</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Design</h3>
+                    <p class="text-gray-600">Crafting beautiful, user-friendly interfaces</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-6">4</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Development</h3>
+                    <p class="text-gray-600">Building with clean, efficient code</p>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-pink-600 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-6">5</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Launch</h3>
+                    <p class="text-gray-600">Testing, deployment, and ongoing support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Packages -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Flexible Pricing Options</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Choose the package that fits your needs and budget</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <!-- Basic Package -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-gray-200 hover:border-blue-500 transition-all hover:shadow-2xl">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+                        <p class="text-gray-600 mb-4">Perfect for small businesses</p>
+                        <div class="text-5xl font-bold text-gray-900 mb-2">$2,500+</div>
+                        <p class="text-sm text-gray-500">Starting price</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Up to 5 Pages</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Responsive Design</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Contact Form</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Basic SEO Setup</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>2 Weeks Delivery</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="block text-center bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-full font-semibold transition">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Professional Package -->
+                <div class="bg-gradient-to-br from-purple-600 to-blue-600 rounded-3xl p-8 text-white transform scale-105 shadow-2xl relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-bold">
+                        MOST POPULAR
+                    </div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                        <p class="text-purple-100 mb-4">For growing businesses</p>
+                        <div class="text-5xl font-bold mb-2">$5,000+</div>
+                        <p class="text-sm text-purple-200">Starting price</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Up to 15 Pages</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Custom Design</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>CMS Integration</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Advanced SEO</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>E-Commerce Ready</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>4 Weeks Delivery</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="block text-center bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-full font-semibold transition">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Enterprise Package -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-gray-200 hover:border-blue-500 transition-all hover:shadow-2xl">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                        <p class="text-gray-600 mb-4">For large organizations</p>
+                        <div class="text-5xl font-bold text-gray-900 mb-2">Custom</div>
+                        <p class="text-sm text-gray-500">Contact for quote</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Unlimited Pages</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Custom Web Applications</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>API Integrations</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Dedicated Support</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Priority Delivery</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="block text-center bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-full font-semibold transition">
+                        Contact Us
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Government Solutions -->
+    <section class="py-24 bg-gradient-to-br from-blue-900 to-purple-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="float-animation order-2 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600" alt="Government Portal" class="rounded-2xl shadow-2xl">
+                </div>
+                <div class="order-1 md:order-2">
+                    <div class="glass-effect inline-block px-4 py-2 rounded-full mb-6">
+                        <span class="text-sm font-semibold">🏛️ Government Digital Solutions</span>
+                    </div>
+                    <h2 class="text-5xl font-bold mb-6">Specialized Government Portals</h2>
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        We develop secure, compliant web portals specifically designed for federal, state, and local government agencies.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-lg">Section 508 & WCAG 2.1 Compliant</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-lg">FedRAMP & FISMA Security Standards</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-lg">Citizen Services Portals</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-lg">Public Records Management Systems</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="inline-flex items-center gap-2 bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-lg transition hover-scale">
+                        <span>Discuss Your Portal</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Why Choose Our Web Development?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">We deliver excellence in every project</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-5xl mb-4">⚡</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Fast Performance</h3>
+                    <p class="text-gray-600">Optimized for speed with fast loading times and smooth user experience.</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Bank-Level Security</h3>
+                    <p class="text-gray-600">SSL encryption, secure hosting, and regular security updates to protect your data.</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-5xl mb-4">📱</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Mobile Optimized</h3>
+                    <p class="text-gray-600">Perfect display on all devices - phones, tablets, and desktops.</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-5xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">SEO Ready</h3>
+                    <p class="text-gray-600">Built with search engine optimization best practices from day one.</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-5xl mb-4">🤝</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Ongoing Support</h3>
+                    <p class="text-gray-600">We're here after launch with maintenance, updates, and technical support.</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="text-5xl mb-4">💼</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Business Focused</h3>
+                    <p class="text-gray-600">Designed to drive results, conversions, and achieve your business goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl p-12 text-center text-white">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Build Your Website?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Let's discuss your project and create a powerful digital solution for your business
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-lg transition hover-scale">
+                        Start Your Project
+                    </a>
+                    <a href="tel:+15551234567" class="glass-effect hover:bg-white/20 px-8 py-4 rounded-full font-bold text-lg transition hover-scale">
+                        Call: (555) 123-4567
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">M</span>
+                        </div>
+                        <div class="text-xl font-bold">Moheb Supply Group</div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Your trusted partner for government and business supply solutions plus professional website development.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="supplies.html" class="hover:text-white transition">Supplies</a></li>
+                        <li><a href="web-development.html" class="hover:text-white transition">Web Development</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Office Supplies</li>
+                        <li>Industrial Equipment</li>
+                        <li>Website Development</li>
+                        <li>Government Portals</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>info@mohebsupplygroup.com</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>Mon-Fri: 8AM - 6PM</li>
+                        <li>NAICS: 424990</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Moheb Supply Group. All rights reserved. | Sole Proprietorship</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>

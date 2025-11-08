@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Moheb Supply Group | Your Trusted Business Partner</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn about Moheb Supply Group - your trusted partner for comprehensive supply solutions and professional web development services for government and business.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-lg z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">M</span>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-gray-900">Moheb Supply Group</div>
+                        <div class="text-xs text-gray-500">NAICS: 424990</div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-gray-900">Home</a>
+                    <a href="supplies.html" class="nav-link text-gray-600 hover:text-gray-900">Supplies</a>
+                    <a href="web-development.html" class="nav-link text-gray-600 hover:text-gray-900">Web Development</a>
+                    <a href="about.html" class="nav-link text-gray-900 font-semibold">About</a>
+                    <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition">Contact Us</a>
+                </div>
+                
+                <button id="mobileMenuBtn" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pt-4 pb-3 space-y-3">
+                <a href="index.html" class="block text-gray-600 hover:text-gray-900">Home</a>
+                <a href="supplies.html" class="block text-gray-600 hover:text-gray-900">Supplies</a>
+                <a href="web-development.html" class="block text-gray-600 hover:text-gray-900">Web Development</a>
+                <a href="about.html" class="block text-gray-900 font-semibold">About</a>
+                <a href="contact.html" class="block text-gray-600 hover:text-gray-900">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white pt-32 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="glass-effect inline-block px-4 py-2 rounded-full mb-6">
+                    <span class="text-sm font-semibold">🤝 About Moheb Supply Group</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    Your Trusted <span class="gradient-text">Business Partner</span>
+                </h1>
+                
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+                    Delivering comprehensive supply solutions and professional web development services to government agencies and businesses across the nation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-5xl font-bold text-gray-900 mb-6">Our Story</h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Moheb Supply Group was founded with a clear mission: to simplify procurement and digital transformation for government agencies and businesses. We recognized the challenges organizations face in finding reliable suppliers and building effective online presence.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        What started as a vision to provide quality supplies has evolved into a comprehensive solution provider, offering both physical products and digital services. Our dual expertise allows us to serve as a one-stop shop for organizations looking to streamline their operations.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Today, we proudly serve federal, state, and local government agencies, as well as businesses of all sizes, delivering excellence in every interaction.
+                    </p>
+                </div>
+                <div class="float-animation">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800" alt="Team Collaboration" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Mission & Vision</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Driving our commitment to excellence</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Mission -->
+                <div class="bg-white rounded-3xl p-10 shadow-lg border-2 border-blue-100">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-4xl mb-6">
+                        🎯
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        To provide exceptional supply solutions and innovative web development services that empower government agencies and businesses to achieve their goals efficiently and effectively. We are committed to delivering quality, reliability, and outstanding customer service in every project.
+                    </p>
+                </div>
+                
+                <!-- Vision -->
+                <div class="bg-white rounded-3xl p-10 shadow-lg border-2 border-purple-100">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-4xl mb-6">
+                        🚀
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        To be the most trusted and preferred partner for organizations seeking comprehensive supply and digital solutions. We envision a future where businesses and government agencies can rely on a single source for all their operational and technological needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Our Core Values</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">The principles that guide everything we do</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Integrity -->
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-5xl mx-auto mb-6 hover-scale">
+                        🛡️
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Integrity</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We conduct business with honesty, transparency, and ethical practices. Your trust is our most valuable asset.
+                    </p>
+                </div>
+                
+                <!-- Excellence -->
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-5xl mx-auto mb-6 hover-scale">
+                        ⭐
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Excellence</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We strive for the highest quality in our products, services, and customer interactions. Good enough is never enough.
+                    </p>
+                </div>
+                
+                <!-- Innovation -->
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-5xl mx-auto mb-6 hover-scale">
+                        💡
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Innovation</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We embrace new technologies and methods to deliver cutting-edge solutions that keep you ahead of the curve.
+                    </p>
+                </div>
+                
+                <!-- Reliability -->
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center text-5xl mx-auto mb-6 hover-scale">
+                        🤝
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Reliability</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        You can count on us to deliver on time, every time. We build lasting relationships through consistent performance.
+                    </p>
+                </div>
+                
+                <!-- Customer Focus -->
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center text-5xl mx-auto mb-6 hover-scale">
+                        💖
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Customer Focus</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Your success is our success. We listen, understand, and tailor our solutions to meet your unique needs.
+                    </p>
+                </div>
+                
+                <!-- Accountability -->
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center text-5xl mx-auto mb-6 hover-scale">
+                        ✅
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Accountability</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We take ownership of our commitments and stand behind every product and service we deliver.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats & Achievements -->
+    <section class="py-24 bg-gradient-to-br from-blue-900 to-purple-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4">Our Impact in Numbers</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">Delivering results that matter</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-6xl font-bold mb-3 gradient-text">500+</div>
+                    <p class="text-xl text-gray-300">Satisfied Clients</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-6xl font-bold mb-3 gradient-text">1000+</div>
+                    <p class="text-xl text-gray-300">Products Available</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-6xl font-bold mb-3 gradient-text">50+</div>
+                    <p class="text-xl text-gray-300">Websites Launched</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-6xl font-bold mb-3 gradient-text">24/7</div>
+                    <p class="text-xl text-gray-300">Customer Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Sets Us Apart -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">What Sets Us Apart</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Why organizations choose Moheb Supply Group</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Dual Expertise -->
+                <div class="card-shine bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 border-2 border-blue-100">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                            🎯
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dual Expertise</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Unlike traditional suppliers or web agencies, we offer both physical supply solutions and digital services. This unique combination allows us to serve as a comprehensive partner for all your operational needs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Government Certified -->
+                <div class="card-shine bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 border-2 border-green-100">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                            🏛️
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Government Certified</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                We understand government procurement requirements and compliance standards. Our certifications and experience make us an ideal partner for federal, state, and local agencies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Personalized Service -->
+                <div class="card-shine bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 border-2 border-purple-100">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                            💼
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Personalized Service</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                As a sole proprietorship, we provide personalized attention and direct communication. You work directly with decision-makers who are invested in your success.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Competitive Pricing -->
+                <div class="card-shine bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-8 border-2 border-orange-100">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-16 h-16 bg-orange-600 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                            💰
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Competitive Pricing</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Our efficient operations and strong supplier relationships allow us to offer competitive prices without compromising quality. Bulk discounts and flexible payment terms available.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fast Turnaround -->
+                <div class="card-shine bg-gradient-to-br from-red-50 to-pink-50 rounded-3xl p-8 border-2 border-red-100">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                            ⚡
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Fast Turnaround</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Time is money. We pride ourselves on quick response times, rapid delivery, and efficient project completion. Next-day shipping available on many supply items.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ongoing Support -->
+                <div class="card-shine bg-gradient-to-br from-indigo-50 to-blue-50 rounded-3xl p-8 border-2 border-indigo-100">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-16 h-16 bg-indigo-600 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+                            🤝
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Ongoing Support</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Our relationship doesn't end at delivery. We provide continuous support, maintenance, and consultation to ensure your long-term success and satisfaction.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Compliance -->
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Certifications & Compliance</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Meeting the highest industry standards</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg text-center">
+                    <div class="text-5xl mb-4">🏆</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">NAICS Certified</h3>
+                    <p class="text-gray-600">NAICS Code: 424990</p>
+                    <p class="text-sm text-gray-500 mt-2">Other Miscellaneous Nondurable Goods Merchant Wholesalers</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg text-center">
+                    <div class="text-5xl mb-4">✅</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">GSA Schedule Ready</h3>
+                    <p class="text-gray-600">Federal Contract Compliant</p>
+                    <p class="text-sm text-gray-500 mt-2">Ready to serve government agencies</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg text-center">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Security Compliant</h3>
+                    <p class="text-gray-600">Data Protection Standards</p>
+                    <p class="text-sm text-gray-500 mt-2">HTTPS, SSL, and secure hosting</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg text-center">
+                    <div class="text-5xl mb-4">♿</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">WCAG 2.1 Compliant</h3>
+                    <p class="text-gray-600">Web Accessibility</p>
+                    <p class="text-sm text-gray-500 mt-2">Section 508 accessibility standards</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg text-center">
+                    <div class="text-5xl mb-4">📋</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Business Licensed</h3>
+                    <p class="text-gray-600">Fully Licensed & Insured</p>
+                    <p class="text-sm text-gray-500 mt-2">Registered sole proprietorship</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg text-center">
+                    <div class="text-5xl mb-4">🌍</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Nationwide Service</h3>
+                    <p class="text-gray-600">All 50 States</p>
+                    <p class="text-sm text-gray-500 mt-2">Coast-to-coast delivery & support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">Industries We Serve</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Trusted by organizations across multiple sectors</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 text-center hover:shadow-lg transition">
+                    <div class="text-4xl mb-3">🏛️</div>
+                    <h3 class="font-bold text-gray-900">Government Agencies</h3>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 text-center hover:shadow-lg transition">
+                    <div class="text-4xl mb-3">🏫</div>
+                    <h3 class="font-bold text-gray-900">Education</h3>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 text-center hover:shadow-lg transition">
+                    <div class="text-4xl mb-3">🏥</div>
+                    <h3 class="font-bold text-gray-900">Healthcare</h3>
+                </div>
+                
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-6 text-center hover:shadow-lg transition">
+                    <div class="text-4xl mb-3">🏢</div>
+                    <h3 class="font-bold text-gray-900">Corporate</h3>
+                </div>
+                
+                <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-6 text-center hover:shadow-lg transition">
+                    <div class="text-4xl mb-3">🏭</div>
+                    <h3 class="font-bold text-gray-900">Manufacturing</h3>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl p-6 text-center hover:shadow-lg transition">
+                    <div class="text-4xl mb-3">🛒</div>
+                    <h3 class="font-bold text-gray-900">Retail</h3>
+                </div>
+                
+                <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-6 text-center hover:shadow-lg transition">
+                    <div class="text-4xl mb-3">🏗️</div>
+                    <h3 class="font-bold text-gray-900">Construction</h3>
+                </div>
+                
+                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-6 text-center hover:shadow-lg transition">
+                    <div class="text-4xl mb-3">💼</div>
+                    <h3 class="font-bold text-gray-900">Small Business</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-to-br from-blue-900 to-purple-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">Ready to Work Together?</h2>
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    Join hundreds of satisfied clients who trust Moheb Supply Group for their supply and digital needs. Let's discuss how we can help your organization succeed.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-lg transition hover-scale flex items-center justify-center gap-2">
+                        <span>Get in Touch</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
+                    <a href="supplies.html" class="glass-effect hover:bg-white/20 px-8 py-4 rounded-full font-bold text-lg transition hover-scale">
+                        Explore Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">M</span>
+                        </div>
+                        <div class="text-xl font-bold">Moheb Supply Group</div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Your trusted partner for government and business supply solutions plus professional website development.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="supplies.html" class="hover:text-white transition">Supplies</a></li>
+                        <li><a href="web-development.html" class="hover:text-white transition">Web Development</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Office Supplies</li>
+                        <li>Industrial Equipment</li>
+                        <li>Website Development</li>
+                        <li>Government Portals</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>info@mohebsupplygroup.com</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>Mon-Fri: 8AM - 6PM</li>
+                        <li>NAICS: 424990</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Moheb Supply Group. All rights reserved. | Sole Proprietorship</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
