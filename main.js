@@ -1,269 +1,360 @@
-// Mobile Menu Toggle
+// ===================================
+// Moheb Supply Group - Main JavaScript
+// ===================================
+
+// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Mobile Menu Functionality
+    // ===================================
+    // Mobile Menu Toggle
+    // ===================================
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     
     if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', function() {
-            mobileMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle icon between hamburger and X
+            const icon = this.querySelector('svg path');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            } else {
+                icon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
         });
         
         // Close mobile menu when clicking on a link
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenu.classList.remove('active');
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = mobileMenuBtn.querySelector('svg path');
+                icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
             });
         });
     }
     
-    // Smooth Scroll for Navigation Links
+    // ===================================
+    // Smooth Scrolling for Anchor Links
+    // ===================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Only prevent default if href is not just "#"
+            if (href !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                
+                if (target) {
+                    const navHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+    
+    // ===================================
+    // Contact Form Handling
+    // ===================================
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+            
+            // Get form values
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                organization: document.getElementById('organization').value,
+                interest: document.getElementById('interest').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Simple validation
+            if (!formData.name || !formData.email || !formData.interest || !formData.message) {
+                showAlert('Please fill in all required fields.', 'error');
+                return;
             }
-        });
-    });
-    
-    // Scroll Animation Observer
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.email)) {
+                showAlert('Please enter a valid email address.', 'error');
+                return;
             }
+            
+            // Show loading state
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span class="spinner active"></span> Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission (replace with actual API call)
+            setTimeout(() => {
+                // Show success message
+                showAlert('Thank you! Your message has been sent. We\'ll respond within 24 hours.', 'success');
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Reset button
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                
+                // In production, you would send this data to your backend:
+                // fetch('/api/contact', {
+                //     method: 'POST',
+                //     headers: {
+                //         'Content-Type': 'application/json',
+                //     },
+                //     body: JSON.stringify(formData)
+                // })
+                // .then(response => response.json())
+                // .then(data => {
+                //     showAlert('Message sent successfully!', 'success');
+                //     contactForm.reset();
+                // })
+                // .catch(error => {
+                //     showAlert('Error sending message. Please try again.', 'error');
+                // });
+                
+            }, 1500); // Simulated delay
         });
-    }, observerOptions);
-    
-    // Observe all cards
-    document.querySelectorAll('.card-hover, .category-card, .product-card, .service-card').forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        card.style.transition = 'all 0.6s ease-out';
-        observer.observe(card);
-    });
-});
-
-// Request Quote Function (for Supplies page)
-function requestQuote(productName) {
-    alert(`Quote request for "${productName}" submitted!\n\nWe'll contact you within 24 hours with pricing and availability.\n\nReference: QTE-${Date.now()}`);
-}
-
-// Show Products Function (for Supplies page)
-function showProducts(category) {
-    const categoryNames = {
-        'office': 'Office Supplies',
-        'industrial': 'Industrial Equipment',
-        'medical': 'Medical & Janitorial Supplies'
-    };
-    
-    alert(`Showing ${categoryNames[category]} products.\n\nIn a full implementation, this would filter the product catalog and display relevant items.`);
-}
-
-// Open Quote Modal Function
-function openQuoteModal(serviceType) {
-    const modal = document.getElementById('quoteModal');
-    const modalServiceType = document.getElementById('modalServiceType');
-    
-    if (modal && modalServiceType) {
-        modal.classList.remove('hidden');
-        modalServiceType.textContent = `Get a customized quote for ${serviceType}`;
     }
-}
-
-// Close Quote Modal Function
-function closeQuoteModal() {
-    const modal = document.getElementById('quoteModal');
-    if (modal) {
-        modal.classList.add('hidden');
+    
+    // ===================================
+    // Alert/Notification Function
+    // ===================================
+    function showAlert(message, type = 'info') {
+        // Remove existing alerts
+        const existingAlerts = document.querySelectorAll('.custom-alert');
+        existingAlerts.forEach(alert => alert.remove());
+        
+        // Create alert element
+        const alert = document.createElement('div');
+        alert.className = `custom-alert alert alert-${type} fixed top-24 right-6 max-w-md z-50 shadow-2xl`;
+        alert.style.animation = 'slideDown 0.5s ease';
+        
+        const bgColor = type === 'success' ? 'bg-green-50 border-green-500 text-green-900' :
+                       type === 'error' ? 'bg-red-50 border-red-500 text-red-900' :
+                       'bg-blue-50 border-blue-500 text-blue-900';
+        
+        alert.className += ` ${bgColor} border-l-4 p-4 rounded-lg`;
+        
+        alert.innerHTML = `
+            <div class="flex items-start">
+                <div class="flex-1">
+                    <p class="font-semibold">${message}</p>
+                </div>
+                <button class="ml-4 text-gray-500 hover:text-gray-700" onclick="this.parentElement.parentElement.remove()">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+        `;
+        
+        document.body.appendChild(alert);
+        
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+            alert.style.animation = 'slideUp 0.5s ease';
+            setTimeout(() => alert.remove(), 500);
+        }, 5000);
     }
-}
-
-// Contact Form Submission (for Contact page)
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone')?.value || 'Not provided';
-        const company = document.getElementById('company')?.value || 'Not provided';
-        const service = document.getElementById('service').value;
-        const message = document.getElementById('message').value;
-        
-        // Generate reference number
-        const referenceNumber = `MSG-${Date.now()}`;
-        
-        // Show success message
-        alert(`Thank you, ${name}!\n\nYour message has been received.\n\nWe'll get back to you at ${email} within 24 hours regarding your interest in ${service}.\n\nReference Number: ${referenceNumber}`);
-        
-        // In a real implementation, you would send this data to your server
-        // Example:
-        // fetch('/api/contact', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify({ name, email, phone, company, service, message })
-        // }).then(response => response.json())
-        //   .then(data => console.log(data));
-        
-        // Reset form
-        this.reset();
-    });
-}
-
-// Quote Form Submission
-const quoteForm = document.getElementById('quoteForm');
-if (quoteForm) {
-    quoteForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        alert('Thank you for your quote request!\n\nWe will contact you within 24 hours with a detailed proposal.\n\nReference: QTE-' + Date.now());
-        
-        // Reset form and close modal
-        this.reset();
-        closeQuoteModal();
-    });
-}
-
-// Close modal when clicking outside
-const quoteModal = document.getElementById('quoteModal');
-if (quoteModal) {
-    quoteModal.addEventListener('click', function(e) {
-        if (e.target === this) {
-            closeQuoteModal();
-        }
-    });
-}
-
-// Navbar Scroll Effect
-let lastScroll = 0;
-window.addEventListener('scroll', function() {
+    
+    // ===================================
+    // Navbar Background on Scroll
+    // ===================================
     const navbar = document.querySelector('nav');
-    const currentScroll = window.pageYOffset;
+    let lastScroll = 0;
     
-    if (navbar) {
-        if (currentScroll > 100) {
-            navbar.classList.add('scrolled');
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        // Add shadow when scrolled
+        if (currentScroll > 50) {
+            navbar.classList.add('shadow-xl');
         } else {
-            navbar.classList.remove('scrolled');
+            navbar.classList.remove('shadow-xl');
         }
-    }
+        
+        lastScroll = currentScroll;
+    });
     
-    lastScroll = currentScroll;
-});
-
-// Add to Cart Functionality (if needed for e-commerce)
-function addToCart(productId, productName) {
-    // Get cart from localStorage
-    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
-    
-    // Check if product already in cart
-    const existingItem = cart.find(item => item.id === productId);
-    
-    if (existingItem) {
-        existingItem.quantity += 1;
-    } else {
-        cart.push({
-            id: productId,
-            name: productName,
-            quantity: 1
+    // ===================================
+    // Lazy Loading Images (if needed)
+    // ===================================
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        document.querySelectorAll('img.lazy').forEach(img => {
+            imageObserver.observe(img);
         });
     }
     
-    // Save cart
-    localStorage.setItem('cart', JSON.stringify(cart));
-    
-    // Show notification
-    alert(`${productName} added to cart!`);
-    
-    // Update cart count if element exists
-    updateCartCount();
-}
-
-// Update Cart Count
-function updateCartCount() {
-    const cartCountElement = document.getElementById('cartCount');
-    if (cartCountElement) {
-        const cart = JSON.parse(localStorage.getItem('cart') || '[]');
-        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-        cartCountElement.textContent = totalItems;
-    }
-}
-
-// Initialize cart count on page load
-updateCartCount();
-
-// Form Validation Helper
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-}
-
-function validatePhone(phone) {
-    const re = /^[\d\s\-\+\(\)]+$/;
-    return re.test(phone);
-}
-
-// Loading State Helper
-function setLoadingState(button, isLoading) {
-    if (isLoading) {
-        button.disabled = true;
-        button.classList.add('loading');
-        button.dataset.originalText = button.textContent;
-        button.textContent = 'Loading...';
-    } else {
-        button.disabled = false;
-        button.classList.remove('loading');
-        button.textContent = button.dataset.originalText;
-    }
-}
-
-// Toast Notification System
-function showToast(message, type = 'success') {
-    const toast = document.createElement('div');
-    toast.className = `fixed top-4 right-4 px-6 py-4 rounded-lg shadow-lg text-white z-50 ${
-        type === 'success' ? 'bg-green-500' : 
-        type === 'error' ? 'bg-red-500' : 
-        'bg-blue-500'
-    }`;
-    toast.textContent = message;
-    
-    document.body.appendChild(toast);
-    
-    setTimeout(() => {
-        toast.style.opacity = '0';
-        toast.style.transition = 'opacity 0.3s';
-        setTimeout(() => toast.remove(), 300);
-    }, 3000);
-}
-
-// Export functions for use in other files if needed
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        requestQuote,
-        showProducts,
-        openQuoteModal,
-        closeQuoteModal,
-        addToCart,
-        updateCartCount,
-        validateEmail,
-        validatePhone,
-        setLoadingState,
-        showToast
+    // ===================================
+    // Animate Elements on Scroll
+    // ===================================
+    const animateOnScroll = () => {
+        const elements = document.querySelectorAll('.fade-in-on-scroll');
+        
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementBottom = element.getBoundingClientRect().bottom;
+            
+            if (elementTop < window.innerHeight && elementBottom > 0) {
+                element.classList.add('fade-in');
+            }
+        });
     };
+    
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Run once on load
+    
+    // ===================================
+    // Copy to Clipboard Function
+    // ===================================
+    window.copyToClipboard = function(text) {
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(text).then(() => {
+                showAlert('Copied to clipboard!', 'success');
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        } else {
+            // Fallback for older browsers
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            showAlert('Copied to clipboard!', 'success');
+        }
+    };
+    
+    // ===================================
+    // Print Page Function
+    // ===================================
+    window.printPage = function() {
+        window.print();
+    };
+    
+    // ===================================
+    // Current Year in Footer
+    // ===================================
+    const yearElements = document.querySelectorAll('.current-year');
+    yearElements.forEach(element => {
+        element.textContent = new Date().getFullYear();
+    });
+    
+    // ===================================
+    // FAQ Accordion (if needed)
+    // ===================================
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (question) {
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+                const answer = item.querySelector('.faq-answer');
+                if (answer) {
+                    answer.style.maxHeight = answer.style.maxHeight ? null : answer.scrollHeight + 'px';
+                }
+            });
+        }
+    });
+    
+    // ===================================
+    // Back to Top Button
+    // ===================================
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
+    // ===================================
+    // Initialize Tooltips (if needed)
+    // ===================================
+    const tooltips = document.querySelectorAll('[data-tooltip]');
+    tooltips.forEach(element => {
+        element.addEventListener('mouseenter', function() {
+            const tooltipText = this.getAttribute('data-tooltip');
+            const tooltip = document.createElement('div');
+            tooltip.className = 'absolute bg-gray-900 text-white px-3 py-2 rounded text-sm z-50';
+            tooltip.textContent = tooltipText;
+            tooltip.style.bottom = '100%';
+            tooltip.style.left = '50%';
+            tooltip.style.transform = 'translateX(-50%)';
+            tooltip.style.marginBottom = '8px';
+            this.style.position = 'relative';
+            this.appendChild(tooltip);
+            
+            this.addEventListener('mouseleave', function() {
+                tooltip.remove();
+            }, { once: true });
+        });
+    });
+    
+    // ===================================
+    // Console Welcome Message
+    // ===================================
+    console.log('%c🎉 Welcome to Moheb Supply Group! 🎉', 'color: #667eea; font-size: 20px; font-weight: bold;');
+    console.log('%cWebsite developed with ❤️ for your business needs', 'color: #764ba2; font-size: 14px;');
+    console.log('%cFor inquiries: info@moheb.com | +1 (413) 285-3176', 'color: #333; font-size: 12px;');
+    
+});
+
+// ===================================
+// Service Worker Registration (PWA - Optional)
+// ===================================
+if ('serviceWorker' in navigator) {
+    // Uncomment when you have a service worker file
+    // window.addEventListener('load', () => {
+    //     navigator.serviceWorker.register('/sw.js')
+    //         .then(registration => console.log('SW registered'))
+    //         .catch(error => console.log('SW registration failed'));
+    // });
+}
+
+// ===================================
+// Prevent Form Resubmission on Page Refresh
+// ===================================
+if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
 }
