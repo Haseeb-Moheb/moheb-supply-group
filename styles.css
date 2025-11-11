@@ -3,9 +3,14 @@
    =================================== */
 
 /* Hero Gradient Background */
+/* .hero-gradient {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e293b 50%, #0f172a 100%);
+} */
+
 .hero-gradient {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
 }
+
 
 /* Gradient Text Effect */
 .gradient-text {
