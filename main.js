@@ -130,6 +130,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1500); // Simulated delay
         });
     }
+        // Check for success/error messages in URL
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            if (urlParams.get('success') === '1') {
+                showAlert('Thank you! Your message has been sent successfully. We\'ll respond within 24 hours.', 'success');
+            }
+            
+            if (urlParams.get('error') === 'missing') {
+                showAlert('Please fill in all required fields.', 'error');
+            }
+            
+            if (urlParams.get('error') === 'invalid_email') {
+                showAlert('Please enter a valid email address.', 'error');
+            }
+            
+            if (urlParams.get('error') === 'send_failed') {
+                showAlert('Sorry, there was an error sending your message. Please try again or email us directly.', 'error');
+            }
+        });
     
     // ===================================
     // Alert/Notification Function
