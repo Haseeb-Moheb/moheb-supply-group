@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
 }
 
 // Your email address (the one you created in Hostinger)
-$to_email = "info@moheb.com";
+$to_email = "info@moheb.cloud";
 
 // Get form data and sanitize
 $name = strip_tags(trim($_POST["name"]));
