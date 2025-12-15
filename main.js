@@ -60,76 +60,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===================================
-    // Contact Form Handling
-    // ===================================
-    const contactForm = document.getElementById('contactForm');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                organization: document.getElementById('organization').value,
-                interest: document.getElementById('interest').value,
-                message: document.getElementById('message').value
-            };
-            
-            // Simple validation
-            if (!formData.name || !formData.email || !formData.interest || !formData.message) {
+// ===================================
+// Contact Form Client-Side Validation
+// ===================================
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        // Get form values
+        const name = document.getElementById('name')?.value.trim();
+        const email = document.getElementById('email')?.value.trim();
+        const interest = document.getElementById('interest')?.value;
+        const message = document.getElementById('message')?.value.trim();
+        
+        // Only validate if fields exist
+        if (name !== undefined && email !== undefined && interest !== undefined && message !== undefined) {
+            // Validate required fields
+            if (!name || !email || !interest || !message) {
+                e.preventDefault();
                 showAlert('Please fill in all required fields.', 'error');
-                return;
+                return false;
             }
             
-            // Email validation
+            // Validate email format
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(formData.email)) {
+            if (!emailRegex.test(email)) {
+                e.preventDefault();
                 showAlert('Please enter a valid email address.', 'error');
-                return;
+                return false;
             }
             
             // Show loading state
             const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalBtnText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<span class="spinner active"></span> Sending...';
-            submitBtn.disabled = true;
-            
-            // Simulate form submission (replace with actual API call)
-            setTimeout(() => {
-                // Show success message
-                showAlert('Thank you! Your message has been sent. We\'ll respond within 24 hours.', 'success');
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Reset button
-                submitBtn.innerHTML = originalBtnText;
-                submitBtn.disabled = false;
-                
-                // In production, you would send this data to your backend:
-                // fetch('/api/contact', {
-                //     method: 'POST',
-                //     headers: {
-                //         'Content-Type': 'application/json',
-                //     },
-                //     body: JSON.stringify(formData)
-                // })
-                // .then(response => response.json())
-                // .then(data => {
-                //     showAlert('Message sent successfully!', 'success');
-                //     contactForm.reset();
-                // })
-                // .catch(error => {
-                //     showAlert('Error sending message. Please try again.', 'error');
-                // });
-                
-            }, 1500); // Simulated delay
-        });
-    }
+            if (submitBtn) {
+                submitBtn.innerHTML = '<span class="inline-block animate-spin mr-2">⏳</span> Sending...';
+                submitBtn.disabled = true;
+            }
+        }
+        // If validation passes, let the form submit to PHP
+        // Don't call e.preventDefault() here!
+        return true;
+    });
+}
         // Check for success/error messages in URL
         document.addEventListener('DOMContentLoaded', function() {
             const urlParams = new URLSearchParams(window.location.search);
