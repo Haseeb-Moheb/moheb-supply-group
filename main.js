@@ -60,69 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-// ===================================
-// Contact Form Client-Side Validation
-// ===================================
-const contactForm = document.getElementById('contactForm');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        // Get form values
-        const name = document.getElementById('name')?.value.trim();
-        const email = document.getElementById('email')?.value.trim();
-        const interest = document.getElementById('interest')?.value;
-        const message = document.getElementById('message')?.value.trim();
-        
-        // Only validate if fields exist
-        if (name !== undefined && email !== undefined && interest !== undefined && message !== undefined) {
-            // Validate required fields
-            if (!name || !email || !interest || !message) {
-                e.preventDefault();
-                showAlert('Please fill in all required fields.', 'error');
-                return false;
-            }
-            
-            // Validate email format
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                e.preventDefault();
-                showAlert('Please enter a valid email address.', 'error');
-                return false;
-            }
-            
-            // Show loading state
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            if (submitBtn) {
-                submitBtn.innerHTML = '<span class="inline-block animate-spin mr-2">⏳</span> Sending...';
-                submitBtn.disabled = true;
-            }
-        }
-        // If validation passes, let the form submit to PHP
-        // Don't call e.preventDefault() here!
-        return true;
-    });
-}
-        // Check for success/error messages in URL
-        document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            
-            if (urlParams.get('success') === '1') {
-                showAlert('Thank you! Your message has been sent successfully. We\'ll respond within 24 hours.', 'success');
-            }
-            
-            if (urlParams.get('error') === 'missing') {
-                showAlert('Please fill in all required fields.', 'error');
-            }
-            
-            if (urlParams.get('error') === 'invalid_email') {
-                showAlert('Please enter a valid email address.', 'error');
-            }
-            
-            if (urlParams.get('error') === 'send_failed') {
-                showAlert('Sorry, there was an error sending your message. Please try again or email us directly.', 'error');
-            }
-        });
-    
     // ===================================
     // Alert/Notification Function
     // ===================================
@@ -162,6 +99,70 @@ if (contactForm) {
             alert.style.animation = 'slideUp 0.5s ease';
             setTimeout(() => alert.remove(), 500);
         }, 5000);
+    }
+    
+    // ===================================
+    // Contact Form Client-Side Validation
+    // ===================================
+    const contactForm = document.getElementById('contactFormSubmit');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            // Get form values
+            const name = document.getElementById('name')?.value.trim();
+            const email = document.getElementById('email')?.value.trim();
+            const interest = document.getElementById('interest')?.value;
+            const message = document.getElementById('message')?.value.trim();
+            
+            // Only validate if fields exist
+            if (name !== undefined && email !== undefined && interest !== undefined && message !== undefined) {
+                // Validate required fields
+                if (!name || !email || !interest || !message) {
+                    e.preventDefault();
+                    showAlert('Please fill in all required fields.', 'error');
+                    return false;
+                }
+                
+                // Validate email format
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    e.preventDefault();
+                    showAlert('Please enter a valid email address.', 'error');
+                    return false;
+                }
+                
+                // Show loading state
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                if (submitBtn) {
+                    submitBtn.innerHTML = '<span class="inline-block animate-spin mr-2">⏳</span> Sending...';
+                    submitBtn.disabled = true;
+                }
+            }
+            // If validation passes, let the form submit to PHP
+            // Don't call e.preventDefault() here!
+            return true;
+        });
+    }
+    
+    // ===================================
+    // Check for success/error messages in URL
+    // ===================================
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    if (urlParams.get('success') === '1') {
+        showAlert('Thank you! Your message has been sent successfully. We\'ll respond within 24 hours.', 'success');
+    }
+    
+    if (urlParams.get('error') === 'missing') {
+        showAlert('Please fill in all required fields.', 'error');
+    }
+    
+    if (urlParams.get('error') === 'invalid_email') {
+        showAlert('Please enter a valid email address.', 'error');
+    }
+    
+    if (urlParams.get('error') === 'send_failed') {
+        showAlert('Sorry, there was an error sending your message. Please try again or email us directly.', 'error');
     }
     
     // ===================================
@@ -328,7 +329,7 @@ if (contactForm) {
     // ===================================
     console.log('%c🎉 Welcome to Moheb Supply Group! 🎉', 'color: #667eea; font-size: 20px; font-weight: bold;');
     console.log('%cWebsite developed with ❤️ for your business needs', 'color: #764ba2; font-size: 14px;');
-    console.log('%cFor inquiries: info@moheb.com | +1 (413) 285-3176', 'color: #333; font-size: 12px;');
+    console.log('%cFor inquiries: info@moheb.cloud | +1 (413) 285-3176', 'color: #333; font-size: 12px;');
     
 });
 
