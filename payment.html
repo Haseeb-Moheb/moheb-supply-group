@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options - Moheb Supply Group</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-lg z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <img src="logo.jpg" alt="Moheb Supply Group" class="h-12 w-12 rounded-lg">
+                    <div>
+                        <h1 class="text-2xl font-bold text-blue-900">Moheb Supply Group</h1>
+                        <p class="text-xs text-gray-600">Your Trusted Business Partner</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                    <a href="supplies.html" class="text-gray-700 hover:text-blue-600 transition">Supplies</a>
+                    <a href="web-development.html" class="text-gray-700 hover:text-blue-600 transition">Web Development</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600 transition">About</a>
+                    <a href="payment.html" class="text-blue-600 font-semibold">Payment</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="supplies.html" class="block py-2 text-gray-700 hover:text-blue-600">Supplies</a>
+                <a href="web-development.html" class="block py-2 text-gray-700 hover:text-blue-600">Web Development</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-blue-600">About</a>
+                <a href="payment.html" class="block py-2 text-blue-600 font-semibold">Payment</a>
+                <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-blue-900 via-slate-800 to-slate-900 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="animate-fade-in">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">💳 Payment Options</h1>
+                <p class="text-xl md:text-2xl text-blue-200 mb-8">Secure, Fast, and Flexible Payment Methods</p>
+                <div class="flex justify-center space-x-4 text-sm">
+                    <span class="bg-white/10 px-4 py-2 rounded-full">🔒 SSL Secured</span>
+                    <span class="bg-white/10 px-4 py-2 rounded-full">⚡ Instant Processing</span>
+                    <span class="bg-white/10 px-4 py-2 rounded-full">✅ Trusted Partners</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">How to Pay</h2>
+                <p class="text-xl text-gray-600">Choose the payment method that works best for you</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Credit/Debit Cards (Stripe) -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <div class="inline-block bg-blue-600 text-white p-4 rounded-full mb-4">
+                            <i class="fas fa-credit-card text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Credit/Debit Cards</h3>
+                        <p class="text-gray-600">Visa, Mastercard, Amex, Discover</p>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Instant processing</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Secure encryption</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Email receipt</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
+                        Pay with Card (Coming Soon)
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3 text-center">Powered by Stripe</p>
+                </div>
+
+                <!-- PayPal -->
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <div class="inline-block bg-blue-500 text-white p-4 rounded-full mb-4">
+                            <i class="fab fa-paypal text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">PayPal</h3>
+                        <p class="text-gray-600">Fast & secure PayPal payments</p>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Buyer protection</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>No card needed</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Quick checkout</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition font-semibold">
+                        Pay with PayPal (Coming Soon)
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3 text-center">Trusted worldwide</p>
+                </div>
+
+                <!-- Apple Pay -->
+                <div class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <div class="inline-block bg-black text-white p-4 rounded-full mb-4">
+                            <i class="fab fa-apple text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Apple Pay</h3>
+                        <p class="text-gray-600">One-touch payment from iPhone/Mac</p>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Touch ID / Face ID</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Ultra-secure</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>No card details shared</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition font-semibold">
+                        Pay with Apple Pay (Coming Soon)
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3 text-center">Available on Apple devices</p>
+                </div>
+
+                <!-- Bank Transfer/ACH -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <div class="inline-block bg-green-600 text-white p-4 rounded-full mb-4">
+                            <i class="fas fa-university text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Bank Transfer</h3>
+                        <p class="text-gray-600">Direct ACH or wire transfer</p>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Low fees</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Large amounts</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Government agencies</span>
+                        </div>
+                    </div>
+                    <button onclick="document.getElementById('bank-details').scrollIntoView({behavior: 'smooth'})" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition font-semibold">
+                        View Bank Details
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3 text-center">1-3 business days</p>
+                </div>
+
+                <!-- Invoice Payment -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <div class="inline-block bg-purple-600 text-white p-4 rounded-full mb-4">
+                            <i class="fas fa-file-invoice-dollar text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Invoice Payment</h3>
+                        <p class="text-gray-600">NET-30 terms for businesses</p>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Verified businesses</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Government agencies</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Purchase orders accepted</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="block w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition font-semibold text-center">
+                        Request NET-30 Terms
+                    </a>
+                    <p class="text-xs text-gray-500 mt-3 text-center">Subject to credit approval</p>
+                </div>
+
+                <!-- Purchase Order -->
+                <div class="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-center mb-6">
+                        <div class="inline-block bg-red-600 text-white p-4 rounded-full mb-4">
+                            <i class="fas fa-file-contract text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Purchase Order</h3>
+                        <p class="text-gray-600">Government & corporate POs</p>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Federal agencies</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>State/local gov</span>
+                        </div>
+                        <div class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Large corporations</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="block w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition font-semibold text-center">
+                        Submit Purchase Order
+                    </a>
+                    <p class="text-xs text-gray-500 mt-3 text-center">Email PO to info@moheb.cloud</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bank Details Section -->
+    <section id="bank-details" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-100">
+                    <div class="text-center mb-8">
+                        <div class="inline-block bg-green-100 p-4 rounded-full mb-4">
+                            <i class="fas fa-university text-green-600 text-4xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-2">Bank Transfer Details</h2>
+                        <p class="text-gray-600">For wire transfers and ACH payments</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 mb-6">
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center border-b border-blue-200 pb-3">
+                                <span class="text-gray-700 font-semibold">Account Name:</span>
+                                <span class="text-gray-900 font-bold">Moheb Supply Group</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-blue-200 pb-3">
+                                <span class="text-gray-700 font-semibold">Bank Name:</span>
+                                <span class="text-gray-900">[Your Bank Name]</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-blue-200 pb-3">
+                                <span class="text-gray-700 font-semibold">Account Number:</span>
+                                <span class="text-gray-900 font-mono">••••••••1234</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b border-blue-200 pb-3">
+                                <span class="text-gray-700 font-semibold">Routing Number:</span>
+                                <span class="text-gray-900 font-mono">•••••••5678</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-700 font-semibold">SWIFT Code:</span>
+                                <span class="text-gray-900 font-mono">•••••••90</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-lg mb-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-info-circle text-yellow-600 mt-1 mr-3"></i>
+                            <div class="text-sm text-gray-700">
+                                <p class="font-semibold mb-2">Complete banking details are provided after quote approval.</p>
+                                <p>Please include your invoice number in the payment reference.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="contact.html" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
+                            Request Full Bank Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Terms Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Payment Terms & Policies</h2>
+                <p class="text-xl text-gray-600">Clear, fair, and professional</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Web Development Terms -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-600 text-white p-3 rounded-lg mr-4">
+                            <i class="fas fa-laptop-code text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Web Development</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>50% deposit</strong> required to start project</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>50% due</strong> upon project completion</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>Milestone payments</strong> available for large projects</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>Refund policy:</strong> Deposit refundable before work begins</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Supply Orders Terms -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-green-600 text-white p-3 rounded-lg mr-4">
+                            <i class="fas fa-boxes text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Supply Orders</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>Full payment</strong> for orders under $500</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>NET-30 terms</strong> for verified businesses (orders over $500)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>Government PO</strong> accepted from all agencies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-700"><strong>Bulk discounts</strong> available for large orders</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Additional Terms -->
+            <div class="mt-12 max-w-4xl mx-auto">
+                <div class="bg-gray-50 rounded-2xl p-8 border-2 border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Additional Information</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-blue-600 mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Processing Time</h4>
+                                <p class="text-gray-600 text-sm">Card payments: Instant<br>Bank transfer: 1-3 business days<br>Invoice: NET-30 from date</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-shield-alt text-blue-600 mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Security</h4>
+                                <p class="text-gray-600 text-sm">256-bit SSL encryption<br>PCI-DSS compliant<br>Fraud protection included</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-undo text-blue-600 mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Refund Policy</h4>
+                                <p class="text-gray-600 text-sm">Web dev: Before work starts<br>Supplies: Defective items only<br>Processing: 5-10 business days</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-question-circle text-blue-600 mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Questions?</h4>
+                                <p class="text-gray-600 text-sm">Email: info@moheb.cloud<br>Phone: +1 (413) 285-3176<br>Hours: Mon-Fri 8AM-6PM CT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Badge Section -->
+    <section class="py-12 bg-gradient-to-br from-blue-900 to-slate-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center text-white mb-8">
+                <h3 class="text-2xl font-bold mb-2">🔒 Your Payment is Secure</h3>
+                <p class="text-blue-200">We use industry-leading security to protect your information</p>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-8">
+                <div class="flex items-center space-x-2 text-white">
+                    <i class="fas fa-lock text-2xl"></i>
+                    <span class="font-semibold">256-bit SSL</span>
+                </div>
+                <div class="flex items-center space-x-2 text-white">
+                    <i class="fas fa-shield-alt text-2xl"></i>
+                    <span class="font-semibold">PCI Compliant</span>
+                </div>
+                <div class="flex items-center space-x-2 text-white">
+                    <i class="fas fa-check-circle text-2xl"></i>
+                    <span class="font-semibold">Verified Secure</span>
+                </div>
+                <div class="flex items-center space-x-2 text-white">
+                    <i class="fas fa-user-shield text-2xl"></i>
+                    <span class="font-semibold">Privacy Protected</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
+            <p class="text-xl text-gray-600 mb-8">Choose your service and payment method</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="web-development.html" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition font-semibold inline-flex items-center">
+                    <i class="fas fa-laptop-code mr-2"></i>
+                    Start Web Project
+                </a>
+                <a href="supplies.html" class="bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition font-semibold inline-flex items-center">
+                    <i class="fas fa-boxes mr-2"></i>
+                    Order Supplies
+                </a>
+                <a href="contact.html" class="bg-purple-600 text-white px-8 py-4 rounded-lg hover:bg-purple-700 transition font-semibold inline-flex items-center">
+                    <i class="fas fa-comments mr-2"></i>
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-blue-900 via-slate-800 to-slate-900 text-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-6 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Moheb Supply Group</h3>
+                    <p class="text-blue-200 text-sm">Your trusted partner for government and business supply solutions plus professional website development.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-blue-200 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="supplies.html" class="hover:text-white transition">Supplies</a></li>
+                        <li><a href="web-development.html" class="hover:text-white transition">Web Development</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-blue-200 text-sm">
+                        <li><i class="fas fa-phone mr-2"></i>+1 (413) 285-3176</li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@moheb.cloud</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>San Diego, CA 92108</li>
+                        <li><i class="fas fa-clock mr-2"></i>Mon-Fri: 8AM-6PM CT<br>Sat: 10AM-4PM CT</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" class="bg-white/10 hover:bg-white/20 p-2 rounded transition"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="bg-white/10 hover:bg-white/20 p-2 rounded transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="bg-white/10 hover:bg-white/20 p-2 rounded transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="bg-white/10 hover:bg-white/20 p-2 rounded transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="bg-white/10 hover:bg-white/20 p-2 rounded transition"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="bg-white/10 hover:bg-white/20 p-2 rounded transition"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="bg-white/10 hover:bg-white/20 p-2 rounded transition"><i class="fab fa-quora"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 pt-6 text-center text-blue-200 text-sm">
+                <p>NAICS Code: 424990 - Other Miscellaneous Nondurable Goods Merchant Wholesalers</p>
+                <p class="mt-2">&copy; <span class="current-year">2024</span> Moheb Supply Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
