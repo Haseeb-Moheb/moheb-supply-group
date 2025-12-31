@@ -113,11 +113,13 @@ $from_email = "noreply@moheb.cloud";
 // Email headers for YOUR notification
 $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=UTF-8\r\n";
-$headers .= "From: Moheb Contact Form <" . $from_email . ">\r\n";
+$headers .= "From: Moheb Supply Group <noreply@moheb.cloud>\r\n";
 $headers .= "Reply-To: " . $email . "\r\n";
-$headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
-$headers .= "X-Priority: 1\r\n"; // High priority
+$headers .= "Return-Path: noreply@moheb.cloud\r\n";
+$headers .= "X-Mailer: Moheb Contact System\r\n";
+$headers .= "X-Priority: 1\r\n";
 $headers .= "Importance: High\r\n";
+$headers .= "Message-ID: <" . time() . "-" . md5($email) . "@moheb.cloud>\r\n";
 
 // Send notification email to YOU
 error_log("Attempting to send notification email to: $to_email");
